@@ -42,7 +42,7 @@ public class UIcontroller : MonoBehaviour
 
     public void MenuInicio()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("S_MainMenu");
     }
 
     public void Configuraciones()
@@ -58,6 +58,7 @@ public class UIcontroller : MonoBehaviour
 
     public void Volver()
     {
+
         SceneManager.LoadScene("MainMenu");
     }
 
