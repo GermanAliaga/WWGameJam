@@ -13,9 +13,9 @@ TagManager:
   - Water
   - UI
   - Suelo
-  - 
-  - 
-  - 
+  - Frente
+  - Medio
+  - Fondo
   - 
   - 
   - 
@@ -41,6 +41,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Frente
+    uniqueID: 842916871
+    locked: 0
+  - name: Medio
+    uniqueID: 3775268239
+    locked: 0
+  - name: Fondo
+    uniqueID: 1041580613
+    locked: 0
+  - name: Background
+    uniqueID: 2201818069
     locked: 0
   m_RenderingLayers:
   - Default
