@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class WorldManager : MonoBehaviour
 {
-    [SerializeField] private static float soulCorruption;
-    private bool ayudar;
+    [SerializeField] private float rotation = 10;
+    [SerializeField] private float good = 5;
+    private bool ayudar;    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,16 +22,18 @@ public class WorldManager : MonoBehaviour
     {
         if(ayudar)
         {
-            soulCorruption = soulCorruption + 20;
+            if(transform.rotation.z > -90 && ayudar == true)
+            {
+                transform.localEulerAngles = new Vector3(0, 0, transform.rotation.z - rotation);
+            }
         }
-        else
-        {
-            soulCorruption = soulCorruption + 2;
-        }            
     }
 
     public void CorruptionDown()
     {
-        soulCorruption = soulCorruption - 20;
+        if(transform.rotation.z < 90 && ayudar == true)
+        {
+            transform.localEulerAngles = new Vector3(0, 0, transform.rotation.z + rotation);
+        }
     }
 }

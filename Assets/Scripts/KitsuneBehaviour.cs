@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KitsuneBehaviour : MonoBehaviour
 {
+    public GameObject kitsune;
     public GameObject dialogo;
 
     public float amplitud;
@@ -10,10 +12,16 @@ public class KitsuneBehaviour : MonoBehaviour
     private Vector2 posicionIni;
     private float desplazamientoY;
 
+    [SerializeField] private bool ayuda;
+
+    [Header("Animacion")]
+    private Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         posicionIni = transform.position;
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,5 +39,26 @@ public class KitsuneBehaviour : MonoBehaviour
     {
         desplazamientoY = Mathf.Sin(Time.time * frecuencia) * amplitud;
         transform.position = new Vector2(posicionIni.x, desplazamientoY + posicionIni.y);
+    }
+
+    private void FixedUpdate()
+    {
+        animator.SetBool("ayuda", false);
+    }
+
+    public void SeleccionOpcSi()
+    {
+        SceneManager.LoadScene("Laberinto");
+    }
+    
+    public void SeleccionOpcNo()
+    {
+        dialogo.SetActive(false);
+        animator.SetBool("ayuda", true);
+    }
+
+    public void DesactivarK()
+    {
+        kitsune.SetActive(false);
     }
 }
