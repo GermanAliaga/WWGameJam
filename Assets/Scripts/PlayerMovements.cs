@@ -23,16 +23,20 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private bool isOnGround;
     private bool salto = false;
 
+    [Header("Animacion")]
+    private Animator animator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Girar();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal") * velMov;
+
+        animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -48,6 +52,8 @@ public class PlayerMovements : MonoBehaviour
     private void FixedUpdate()
     {
         isOnGround = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, sueloCapa);
+        animator.SetBool("enSuelo", isOnGround);
+        animator.SetBool("correr", correr);
 
         Mover(horizontal * Time.fixedDeltaTime, salto, correr);
 
@@ -69,11 +75,11 @@ public class PlayerMovements : MonoBehaviour
             rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, velObjetivo, ref velocidad, suavVelMov);
         }
 
-        if (mover < 0 && mirandoDerecha)
+        if (mover > 0 && mirandoDerecha)
         {
             Girar();
         }
-        else if (mover > 0 && !mirandoDerecha)
+        else if (mover < 0 && !mirandoDerecha)
         {
             Girar();
         }
