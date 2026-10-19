@@ -1,8 +1,17 @@
+using Unity.VectorGraphics;
 using UnityEngine;
 
 public class WorldManager : MonoBehaviour
 {
     [SerializeField] private float rotation = 10;
+    public static Vector2 posicionPJ;
+    public static string escenaAnter;
+
+    public GameObject jugador;
+    public KitsuneBehaviour kitsune1;
+    public KitsuneBehaviour kitsune2;
+    public KitsuneBehaviour kitsune3;
+    public KitsuneBehaviour kitsune4;
 
     private bool ayudar;    
 
@@ -15,7 +24,22 @@ public class WorldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (kitsune1.ayuda == true)
+        {
+
+        }
+        else if (kitsune2.ayuda == true)
+        {
+
+        }
+        else if(kitsune3.ayuda == true)
+        {
+
+        }
+        else if (kitsune4.ayuda == true)
+        {
+
+        }
     }
 
     public void CorruptionUp()

@@ -5,6 +5,8 @@ public class KitsuneBehaviour : MonoBehaviour
 {
     public GameObject kitsune;
     public GameObject dialogo;
+    public GameObject player;
+    public string sceneExtra;
 
     public float amplitud;
     public float frecuencia;
@@ -12,7 +14,7 @@ public class KitsuneBehaviour : MonoBehaviour
     private Vector2 posicionIni;
     private float desplazamientoY;
 
-    [SerializeField] private bool ayuda;
+    public bool ayuda;
 
     [Header("Animacion")]
     private Animator animator;
@@ -48,7 +50,10 @@ public class KitsuneBehaviour : MonoBehaviour
 
     public void SeleccionOpcSi()
     {
-        SceneManager.LoadScene("Laberinto");
+        WorldManager.posicionPJ = player.transform.position;
+        ayuda = true;
+        WorldManager.escenaAnter = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneExtra);
     }
     
     public void SeleccionOpcNo()

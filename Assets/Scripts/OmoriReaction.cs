@@ -18,6 +18,6 @@ public class OmoriReaction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameObject.SetActive(false);
-        SceneManager.LoadScene("S_Game");
+        SceneManager.LoadScene(WorldManager.escenaAnter);
     }
 }
