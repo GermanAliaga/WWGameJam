@@ -4582,6 +4582,8 @@ GameObject:
   - component: {fileID: 324295682}
   - component: {fileID: 324295681}
   - component: {fileID: 324295680}
+  - component: {fileID: 324295685}
+  - component: {fileID: 324295684}
   m_Layer: 0
   m_Name: omori_0
   m_TagString: Untagged
@@ -4677,7 +4679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccf2128d5c127d429bf24087b42a371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritBehaviour
-  dialogo: {fileID: 0}
   amplitud: 0.09
   frecuencia: 2
 --- !u!212 &324295682
@@ -4755,6 +4756,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &324295684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324295679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476a46a6f3e24fd4a9918c4edf07fcc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OmoriReaction
+--- !u!70 &324295685
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324295679}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.7, y: 0.3}
+  m_Direction: 0
 --- !u!4 &354337902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2976458272032099762, guid: bbdc3fe9ecc528e4197a61d2362ee839, type: 3}
