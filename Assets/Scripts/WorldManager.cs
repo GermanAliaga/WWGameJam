@@ -14,17 +14,21 @@ public class WorldManager : MonoBehaviour
     public KitsuneBehaviour kitsune3;
     public KitsuneBehaviour kitsune4;
 
-    private bool ayudar;    
+    private bool ayudar;
+
+    private Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animator = GetComponent<Animator>();
         ayudar = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         /*if(SceneManager.GetActiveScene().name != "Laberinto" || SceneManager.GetActiveScene().name != "S_Sokoban")
         {
             
