@@ -1,5 +1,6 @@
 using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorldManager : MonoBehaviour
 {
@@ -24,6 +25,14 @@ public class WorldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if(SceneManager.GetActiveScene().name != "Laberinto" || SceneManager.GetActiveScene().name != "S_Sokoban")
+        {
+            
+        }*/
+    }
+
+    /*public void AyudaBrindada()
+    {
         if (kitsune1.ayuda == true)
         {
 
@@ -32,7 +41,7 @@ public class WorldManager : MonoBehaviour
         {
 
         }
-        else if(kitsune3.ayuda == true)
+        else if (kitsune3.ayuda == true)
         {
 
         }
@@ -40,7 +49,7 @@ public class WorldManager : MonoBehaviour
         {
 
         }
-    }
+    }*/
 
     public void CorruptionUp()
     {

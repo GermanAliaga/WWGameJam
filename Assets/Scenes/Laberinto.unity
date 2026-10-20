@@ -21072,6 +21072,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldManager
   rotation: 10
+  jugador: {fileID: 232003401}
+  kitsune1: {fileID: 0}
+  kitsune2: {fileID: 0}
+  kitsune3: {fileID: 0}
+  kitsune4: {fileID: 0}
 --- !u!114 &2039975427
 MonoBehaviour:
   m_ObjectHideFlags: 0
