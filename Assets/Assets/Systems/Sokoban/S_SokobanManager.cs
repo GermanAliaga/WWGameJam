@@ -7,6 +7,8 @@ public class S_SokobanManager : MonoBehaviour
 
     [SerializeField] int PointsGoal;
     [SerializeField] int currentPoints;
+
+    [SerializeField] float soulCorruption;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

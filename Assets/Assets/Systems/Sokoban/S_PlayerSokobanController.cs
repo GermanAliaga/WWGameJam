@@ -21,7 +21,6 @@ public class S_PlayerSokobanController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float CooldownPush;
     float timeStamp;
-    Vector2 inputVar;
 
     private Vector3 velocity;
 

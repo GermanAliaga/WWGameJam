@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 421114022090093413}
   m_Layer: 0
   m_Name: SokobanPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   playerSpeed: 2
   PushDir: 4
   CurrentBlock: {fileID: 0}
+  blockList: []
   AnimList:
   - {fileID: 7400000, guid: 738b889dd698df245aede6dbdf294dc2, type: 2}
   - {fileID: 7400000, guid: a9496f7db5090c84aa337a2724945995, type: 2}
