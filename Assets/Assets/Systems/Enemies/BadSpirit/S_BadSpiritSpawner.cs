@@ -12,6 +12,13 @@ public class S_BadSpiritSpawner : MonoBehaviour
 
     [SerializeField] private float spawnTimer;
     public float timeStamp;
+
+    bool start = false;
+
+    public void SetStart()
+    {
+        start = true;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,19 +27,22 @@ public class S_BadSpiritSpawner : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(timeStamp <= Time.time)
+        if (start) 
         {
-            
-            if (currentEnemies < simulEnemies)
+            if (timeStamp <= Time.time)
             {
-                GameObject SpawnedBadSpirit = Instantiate<GameObject>(badSpirit, ChooseRandomSpawnLocation());
-                SpawnedBadSpirit.GetComponent<S_BadSpiritBehaviour>().SetSpawner(this);
-                currentEnemies++;
-                timeStamp = Time.time + spawnTimer;
-            }
-            else
-            {
-                timeStamp = Time.time + spawnTimer;
+
+                if (currentEnemies < simulEnemies)
+                {
+                    GameObject SpawnedBadSpirit = Instantiate<GameObject>(badSpirit, ChooseRandomSpawnLocation());
+                    SpawnedBadSpirit.GetComponent<S_BadSpiritBehaviour>().SetSpawner(this);
+                    currentEnemies++;
+                    timeStamp = Time.time + spawnTimer;
+                }
+                else
+                {
+                    timeStamp = Time.time + spawnTimer;
+                }
             }
         }
     }

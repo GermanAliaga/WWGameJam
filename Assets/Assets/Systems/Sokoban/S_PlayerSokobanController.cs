@@ -19,48 +19,65 @@ public class S_PlayerSokobanController : MonoBehaviour
     [SerializeField] private Animation anim;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float CooldownPush;
     float timeStamp;
 
     private Vector3 velocity;
 
     PlayerInput input;
+    bool start = false;
 
+    public void SetStart()
+    {
+        start = true;
+    }
+    private void Start()
+    {
+        animator.SetBool("enSuelo", true);
+        animator.SetBool("correr", false);
+    }
     private void FixedUpdate()
     {
         //rg.MovePosition(new Vector2(rg.position.x+(velocity.x*playerSpeed), rg.position.y + (velocity.y * playerSpeed)));
         //player.transform.position += velocity*playerSpeed;
-        if (canPush)
+        if (start)
         {
-            rg.linearVelocity = new Vector2(velocity.x * playerSpeed, velocity.y * playerSpeed);
-            if ((velocity.x != 0 && velocity.y == 0) || (velocity.x == 0 && velocity.y != 0))
+            if (canPush)
             {
-                if (velocity.x == 1)
+                rg.linearVelocity = new Vector2(velocity.x * playerSpeed, velocity.y * playerSpeed);
+                animator.SetFloat("Horizontal", 1);
+
+                if (velocity.x > 0) { spriteRenderer.flipX = false; }
+                else if (velocity.x < 0) { spriteRenderer.flipX = true; }
+
+                if ((velocity.x != 0 && velocity.y == 0) || (velocity.x == 0 && velocity.y != 0))
                 {
-                    PushDir = S_SokobanManager.Dir.Right;
+                    if (velocity.x == 1)
+                    {
+                        PushDir = S_SokobanManager.Dir.Right;
+                    }
+                    else if (velocity.x == -1)
+                    {
+                        PushDir = S_SokobanManager.Dir.Left;
+                    }
+                    else if (velocity.y == 1)
+                    {
+                        PushDir = S_SokobanManager.Dir.Up;
+                    }
+                    else if (velocity.y == -1)
+                    {
+                        PushDir = S_SokobanManager.Dir.Down;
+                    }
                 }
-                else if (velocity.x == -1)
+                else
                 {
-                    PushDir = S_SokobanManager.Dir.Left;
+                    PushDir = S_SokobanManager.Dir.None;
+                    animator.SetFloat("Horizontal", 0);
                 }
-                else if (velocity.y == 1)
-                {
-                    PushDir = S_SokobanManager.Dir.Up;
-                }
-                else if (velocity.y == -1)
-                {
-                    PushDir = S_SokobanManager.Dir.Down;
-                }
-            }
-            else
-            {
-                PushDir = S_SokobanManager.Dir.None;
             }
         }
         if (timeStamp <= Time.time) { canPush = true; }
-
-
-
     }
 
     public void SetDirPush(S_SokobanManager.Dir PushDir_)
@@ -117,7 +134,7 @@ public class S_PlayerSokobanController : MonoBehaviour
                 break;
         }
         //anim.Play(anim.clip.name);
-        animator.Play("AN_Idle", 0);
+        //animator.Play("AN_Idle", 0);
     }
     public void OnPushAnimationStart()
     {
