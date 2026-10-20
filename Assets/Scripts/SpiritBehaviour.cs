@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class SpiritBehaviour : MonoBehaviour
 {
-    public GameObject dialogo;
-
     public float amplitud;
     public float frecuencia;
 
@@ -14,16 +12,6 @@ public class SpiritBehaviour : MonoBehaviour
     void Start()
     {
         posicionIni = transform.position;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        dialogo.SetActive(true);
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        dialogo.SetActive(false);
     }
 
     // Update is called once per frame
