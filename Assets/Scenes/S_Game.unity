@@ -294,7 +294,7 @@ MonoBehaviour:
   frecuencia: 2
   ayuda: 0
   agregCorrup: 1
-  worldManager: {fileID: 0}
+  worldManager: {fileID: 2070706969}
 --- !u!1 &88052134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   frecuencia: 2
   ayuda: 0
   agregCorrup: 0
-  worldManager: {fileID: 0}
+  worldManager: {fileID: 2070706969}
 --- !u!1 &934026022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,12 +3494,12 @@ MonoBehaviour:
   kitsune: {fileID: 1157331120}
   dialogo: {fileID: 286601222}
   player: {fileID: 2139504737}
-  sceneExtra: S_Sokoban
+  sceneExtra: S_Sokoban 2
   amplitud: 0.15
   frecuencia: 2
   ayuda: 0
   agregCorrup: 0
-  worldManager: {fileID: 0}
+  worldManager: {fileID: 2070706969}
 --- !u!1 &1213378811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,7 +4814,7 @@ MonoBehaviour:
   frecuencia: 2
   ayuda: 0
   agregCorrup: 1
-  worldManager: {fileID: 0}
+  worldManager: {fileID: 2070706969}
 --- !u!1 &1649130070
 GameObject:
   m_ObjectHideFlags: 0

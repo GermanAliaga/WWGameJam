@@ -26,6 +26,7 @@ public class KitsuneBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         posicionIni = transform.position;
         animator = GetComponent<Animator>();
     }

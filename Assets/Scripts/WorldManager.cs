@@ -31,8 +31,9 @@ public class WorldManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         animator = GetComponent<Animator>();
-        animator.SetFloat("percent", valorCorrup);
+        if (animator) { animator.SetFloat("percent", valorCorrup); }
         if (jugador) 
         { 
             if (jugador.GetComponent<PlayerMovements>()) 
@@ -44,7 +45,11 @@ public class WorldManager : MonoBehaviour
         {
             valorCorrup = 0;
             posicionPJ = new Vector3(0,0,0);
+            ka1 = 0; ka2 = 0; ka3 = 0; ka4 = 0;
+            Debug.Log(ka1 + " / " + ka2 + " / " + ka3 + " / " + ka4);
         }
+        VerificacionKitsune();
+        Debug.Log(ka1 + " / " + ka2 + " / " + ka3 + " / " + ka4);
     }
 
     void Update()
@@ -64,6 +69,7 @@ public class WorldManager : MonoBehaviour
             kitsune1.ayuda = false;
             posicionPJ = jugador.transform.position;
         }
+        else if(ka1 == 2) { kitsune1.gameObject.SetActive(false); }
 
         if (kitsune2.ayuda && ka2 == 1)
         {
@@ -72,6 +78,7 @@ public class WorldManager : MonoBehaviour
             kitsune2.ayuda = false;
             posicionPJ = jugador.transform.position;
         }
+        else if (ka2 == 2) { kitsune2.gameObject.SetActive(false); }
 
         if (kitsune3.ayuda && ka3 == 1)
         {
@@ -80,6 +87,7 @@ public class WorldManager : MonoBehaviour
             kitsune3.ayuda = false;
             posicionPJ = jugador.transform.position;
         }
+        else if (ka3 == 2) { kitsune3.gameObject.SetActive(false); }
 
         if (kitsune4.ayuda && ka4 == 1)
         {
@@ -88,6 +96,7 @@ public class WorldManager : MonoBehaviour
             kitsune4.ayuda = false;
             posicionPJ = jugador.transform.position;
         }
+        else if (ka4 == 2) { kitsune4.gameObject.SetActive(false); }
     }
 
     private void ProcesarKitsune(bool agregaCorrupcion)
