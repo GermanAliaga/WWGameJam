@@ -1243,8 +1243,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157331122}
-        m_TargetAssemblyTypeName: KitsuneBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1157331126}
+        m_TargetAssemblyTypeName: Kitsune3, Assembly-CSharp
         m_MethodName: SeleccionOpcSi
         m_Mode: 1
         m_Arguments:
@@ -3334,14 +3334,14 @@ GameObject:
   - component: {fileID: 1157331125}
   - component: {fileID: 1157331124}
   - component: {fileID: 1157331123}
-  - component: {fileID: 1157331122}
+  - component: {fileID: 1157331126}
   m_Layer: 0
   m_Name: Kitsune3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1157331121
 Transform:
   m_ObjectHideFlags: 0
@@ -3358,26 +3358,6 @@ Transform:
   - {fileID: 286601223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1157331122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157331120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400fd2cdd33717342a0e5c110881b27c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KitsuneBehaviour
-  kitsune: {fileID: 1157331120}
-  dialogo: {fileID: 286601222}
-  player: {fileID: 2139504737}
-  sceneExtra: Laberinto
-  amplitud: 0.15
-  frecuencia: 2
-  ayuda: 0
-  agregCorrup: 0
 --- !u!95 &1157331123
 Animator:
   serializedVersion: 7
@@ -3497,6 +3477,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1157331126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157331120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5599117294dc1047961395d5cdb16e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kitsune3
+  kitsune: {fileID: 1157331120}
+  dialogo: {fileID: 286601222}
+  player: {fileID: 2139504737}
+  sceneExtra: S_Sokoban
+  amplitud: 0.15
+  frecuencia: 2
+  ayuda: 0
+  agregCorrup: 0
 --- !u!1 &1213378811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,8 +4266,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157331122}
-        m_TargetAssemblyTypeName: KitsuneBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1157331126}
+        m_TargetAssemblyTypeName: Kitsune3, Assembly-CSharp
         m_MethodName: SeleccionOpcNo
         m_Mode: 1
         m_Arguments:
@@ -4648,34 +4648,14 @@ GameObject:
   - component: {fileID: 1618064819}
   - component: {fileID: 1618064818}
   - component: {fileID: 1618064817}
-  - component: {fileID: 1618064816}
+  - component: {fileID: 1618064821}
   m_Layer: 0
   m_Name: Kitsune4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1618064816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618064815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400fd2cdd33717342a0e5c110881b27c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KitsuneBehaviour
-  kitsune: {fileID: 1618064815}
-  dialogo: {fileID: 1607940861}
-  player: {fileID: 2139504737}
-  sceneExtra: S_Sokoban
-  amplitud: 0.15
-  frecuencia: 2
-  ayuda: 0
-  agregCorrup: 1
+  m_IsActive: 1
 --- !u!95 &1618064817
 Animator:
   serializedVersion: 7
@@ -4811,6 +4791,26 @@ Transform:
   - {fileID: 1607940865}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618064821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618064815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a267511c6d6cf4248b3366ff671f75ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kitsune4
+  kitsune: {fileID: 1618064815}
+  dialogo: {fileID: 1607940861}
+  player: {fileID: 2139504737}
+  sceneExtra: Laberinto
+  amplitud: 0.15
+  frecuencia: 2
+  ayuda: 0
+  agregCorrup: 1
 --- !u!1 &1649130070
 GameObject:
   m_ObjectHideFlags: 0
@@ -5758,8 +5758,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1618064816}
-        m_TargetAssemblyTypeName: KitsuneBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1618064821}
+        m_TargetAssemblyTypeName: Kitsune4, Assembly-CSharp
         m_MethodName: SeleccionOpcSi
         m_Mode: 1
         m_Arguments:
@@ -6028,8 +6028,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1618064816}
-        m_TargetAssemblyTypeName: KitsuneBehaviour, Assembly-CSharp
+      - m_Target: {fileID: 1618064821}
+        m_TargetAssemblyTypeName: Kitsune4, Assembly-CSharp
         m_MethodName: SeleccionOpcNo
         m_Mode: 1
         m_Arguments:
@@ -6240,7 +6240,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2998482456623377929, guid: fd0a30a19a4c07f4ebdbaeda7d2cc13f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.036
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 2998482456623377929, guid: fd0a30a19a4c07f4ebdbaeda7d2cc13f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6417,6 +6417,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -72
+      objectReference: {fileID: 0}
     - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: jugador
       value: 
@@ -6432,15 +6464,87 @@ PrefabInstance:
     - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: kitsune3
       value: 
-      objectReference: {fileID: 1157331122}
+      objectReference: {fileID: 1157331126}
     - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: kitsune4
       value: 
-      objectReference: {fileID: 1618064816}
+      objectReference: {fileID: 1618064821}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: frames.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3644551792956981685, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[1]'
+      value: 
+      objectReference: {fileID: -8225035334067865923, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[2]'
+      value: 
+      objectReference: {fileID: 685092989676366993, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[3]'
+      value: 
+      objectReference: {fileID: -8477667166464438227, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[4]'
+      value: 
+      objectReference: {fileID: -9214233791994472467, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[5]'
+      value: 
+      objectReference: {fileID: 4777790248688458878, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[6]'
+      value: 
+      objectReference: {fileID: -6138380120480658865, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[7]'
+      value: 
+      objectReference: {fileID: -7878035649321479380, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[8]'
+      value: 
+      objectReference: {fileID: 7558459807338214913, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[9]'
+      value: 
+      objectReference: {fileID: 3371239989369491635, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[10]'
+      value: 
+      objectReference: {fileID: 4653035463452168690, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[11]'
+      value: 
+      objectReference: {fileID: 4401712671465430992, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[12]'
+      value: 
+      objectReference: {fileID: -4997502637363880198, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[13]'
+      value: 
+      objectReference: {fileID: -7652934930588837492, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[14]'
+      value: 
+      objectReference: {fileID: -2532427494631444168, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: 'frames.Array.data[15]'
+      value: 
+      objectReference: {fileID: -8377709819207661412, guid: abe2ba380d7f2594586c7a379a9a8baf, type: 3}
     - target: {fileID: 2601398727434130923, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5610686201081939020, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d71bcdceb4286d46aa5acba437136fa, type: 2}
     - target: {fileID: 8702664469340769735, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
