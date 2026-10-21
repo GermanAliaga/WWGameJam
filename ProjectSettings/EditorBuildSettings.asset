@@ -17,5 +17,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/S_Sokoban.unity
     guid: a5d84834998a40149806beecd89e7229
+  - enabled: 1
+    path: Assets/Scenes/S_Sokoban 2.unity
+    guid: 77ff90fc3ef5e2a49bd0ca5796b78561
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 961955590d30db549bc67910ee9bf00c
+  - enabled: 1
+    path: Assets/Scenes/Ending1.unity
+    guid: 8bebfbbbcd579d3418543ae3431c9d10
+  - enabled: 1
+    path: Assets/Scenes/Ending2.unity
+    guid: 57955cb4953ae154aadebd51dfd5ce8a
+  - enabled: 1
+    path: Assets/Scenes/Ending3.unity
+    guid: 82e758523444a5d46b83a4cb4c4abc44
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

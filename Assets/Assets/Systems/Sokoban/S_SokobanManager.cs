@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class S_SokobanManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class S_SokobanManager : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject spawnManager;
     [SerializeField] GameObject UI;
+    [SerializeField] WorldManager worldManager;
 
     [SerializeField] float startTime;
     [SerializeField] float timeStamp;
@@ -58,7 +60,8 @@ public class S_SokobanManager : MonoBehaviour
     {
         if(currentPoints == PointsGoal)
         {
-            //Finish game
+            
+            SceneManager.LoadScene("S_Game");
         }
     }
 }

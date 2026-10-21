@@ -9,6 +9,7 @@ public class S_BadSpiritSpawner : MonoBehaviour
     [SerializeField] int currentEnemies;
     [SerializeField] private GameObject badSpirit;
     [SerializeField] private List<Transform> SpawnLocations;
+    [SerializeField] public WorldManager worldManager;
 
     [SerializeField] private float spawnTimer;
     public float timeStamp;
