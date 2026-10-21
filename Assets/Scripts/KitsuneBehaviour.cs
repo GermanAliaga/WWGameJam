@@ -16,6 +16,8 @@ public class KitsuneBehaviour : MonoBehaviour
 
     public bool ayuda;
 
+    public static float agregCorrup;
+
     [Header("Animacion")]
     private Animator animator;
 
@@ -41,6 +43,10 @@ public class KitsuneBehaviour : MonoBehaviour
     {
         desplazamientoY = Mathf.Sin(Time.time * frecuencia) * amplitud;
         transform.position = new Vector2(posicionIni.x, desplazamientoY + posicionIni.y);
+        if(ayuda == true)
+        {
+            SeleccionOpcNo();
+        }
     }
 
     private void FixedUpdate()
@@ -51,7 +57,6 @@ public class KitsuneBehaviour : MonoBehaviour
     public void SeleccionOpcSi()
     {
         WorldManager.posicionPJ = player.transform.position;
-        ayuda = true;
         WorldManager.escenaAnter = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneExtra);
     }

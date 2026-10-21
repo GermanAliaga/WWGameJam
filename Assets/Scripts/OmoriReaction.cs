@@ -19,5 +19,6 @@ public class OmoriReaction : MonoBehaviour
     {
         gameObject.SetActive(false);
         SceneManager.LoadScene(WorldManager.escenaAnter);
+        WorldManager.valorCorrup = +KitsuneBehaviour.agregCorrup;
     }
 }
