@@ -61,6 +61,11 @@ public class PlayerMovements : MonoBehaviour
         correr = false;
     }
 
+    public void SetPosition(Vector3 position_)
+    {
+        transform.position = position_;
+    }
+
     private void Mover(float mover, bool saltar, bool run)
     {
 

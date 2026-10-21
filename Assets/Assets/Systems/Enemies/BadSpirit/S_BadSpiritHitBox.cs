@@ -21,7 +21,7 @@ public class S_BadSpiritHitBox : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 parent.SetAnimator("Death", true);
-                // set corruption
+                parent.ApplyCorruption();
             }
         }
     }

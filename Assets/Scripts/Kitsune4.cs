@@ -18,6 +18,8 @@ public class Kitsune4 : MonoBehaviour
 
     public bool agregCorrup;
 
+    public WorldManager worldManager;
+
     [Header("Animacion")]
     private Animator animator;
 
@@ -60,7 +62,7 @@ public class Kitsune4 : MonoBehaviour
         WorldManager.ka4 = 1;
         WorldManager.posicionPJ = player.transform.position;
         WorldManager.escenaAnter = SceneManager.GetActiveScene().name;
-        //SceneManager.LoadScene(sceneExtra);
+        SceneManager.LoadScene(sceneExtra);
     }
 
     public void SeleccionOpcNo()

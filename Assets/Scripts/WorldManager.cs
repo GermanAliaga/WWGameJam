@@ -31,12 +31,20 @@ public class WorldManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        valorCorrup = 0;
-        ka1 = 0;
-        ka2 = 0;
-        ka3 = 0;
-        ka4 = 0;
         animator = GetComponent<Animator>();
+        animator.SetFloat("percent", valorCorrup);
+        if (jugador) 
+        { 
+            if (jugador.GetComponent<PlayerMovements>()) 
+            { 
+                jugador.GetComponent<PlayerMovements>().SetPosition(posicionPJ);
+            } 
+        }
+        if (SceneManager.GetActiveScene().name == "S_MainMenu")
+        {
+            valorCorrup = 0;
+            posicionPJ = new Vector3(0,0,0);
+        }
     }
 
     void Update()
@@ -54,6 +62,7 @@ public class WorldManager : MonoBehaviour
             ProcesarKitsune(kitsune1.agregCorrup);
             ka1 = 2;
             kitsune1.ayuda = false;
+            posicionPJ = jugador.transform.position;
         }
 
         if (kitsune2.ayuda && ka2 == 1)
@@ -61,6 +70,7 @@ public class WorldManager : MonoBehaviour
             ProcesarKitsune(kitsune2.agregCorrup);
             ka2 = 2;
             kitsune2.ayuda = false;
+            posicionPJ = jugador.transform.position;
         }
 
         if (kitsune3.ayuda && ka3 == 1)
@@ -68,6 +78,7 @@ public class WorldManager : MonoBehaviour
             ProcesarKitsune(kitsune3.agregCorrup);
             ka3 = 2;
             kitsune3.ayuda = false;
+            posicionPJ = jugador.transform.position;
         }
 
         if (kitsune4.ayuda && ka4 == 1)
@@ -75,6 +86,7 @@ public class WorldManager : MonoBehaviour
             ProcesarKitsune(kitsune4.agregCorrup);
             ka4 = 2;
             kitsune4.ayuda = false;
+            posicionPJ = jugador.transform.position;
         }
     }
 
@@ -142,8 +154,31 @@ public class WorldManager : MonoBehaviour
         }        
     }*/
 
-    public void AumentoCorruption()
+    public void AumentoCorruption(bool agregaCorrupcion)
     {
-        valorCorrup += 10;
+        valorCorrup += agregaCorrupcion ? 10 : -10;
+
+        // Limitar la corrupción al rango de 0 a 150.
+        valorCorrup = Mathf.Clamp(valorCorrup, 0f, 150f);
+
+        animator.SetFloat("percent", valorCorrup);
+        Debug.Log("Valor de corrupción: " + valorCorrup);
     }
+
+    public void CheckEndLevel()
+    {
+        if(valorCorrup <= 20)
+        {
+            SceneManager.LoadScene("Ending3");
+        }
+        else if (valorCorrup > 20 && valorCorrup <= 80)
+        {
+            SceneManager.LoadScene("Ending2");
+        }
+        else if (valorCorrup > 80 && valorCorrup <= 150)
+        {
+            SceneManager.LoadScene("Ending3");
+        }
+    }
+
 }

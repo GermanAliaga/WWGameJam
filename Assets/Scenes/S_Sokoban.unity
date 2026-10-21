@@ -1035,6 +1035,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &134006099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7023468436050876108, guid: c1372166a01fe3347be26ecc927d8df2, type: 3}
+  m_PrefabInstance: {fileID: 8652833111633888557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &147268976
 GameObject:
   m_ObjectHideFlags: 0
@@ -9000,6 +9005,10 @@ PrefabInstance:
       propertyPath: spawnTimer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4326154695417803418, guid: 858e11261c6902c4387d100d4ccc47a9, type: 3}
+      propertyPath: worldManager
+      value: 
+      objectReference: {fileID: 1672827388}
     - target: {fileID: 5516916886502341130, guid: 858e11261c6902c4387d100d4ccc47a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -12578,17 +12587,45 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -275
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 384989810295211986, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 217
+      value: -72
       objectReference: {fileID: 0}
+    - target: {fileID: 2206822225450528210, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 134006099}
     - target: {fileID: 2601398727434130923, guid: 91dfdd3d46495f948a2c6e6b5a2ffe9d, type: 3}
       propertyPath: m_Name
       value: Canvas (1)

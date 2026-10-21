@@ -62,7 +62,7 @@ public class S_BadSpiritBehaviour : MonoBehaviour
 
     public void ApplyCorruption()
     {
-        spawner.worldManager.AumentoCorruption();
+        spawner.worldManager.AumentoCorruption(true);
     }
     public GameObject GetPlayer() { return player; }
     public void SetPlayer(GameObject player_) {  player = player_; }
