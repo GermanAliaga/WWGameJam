@@ -16,7 +16,7 @@ public class KitsuneBehaviour : MonoBehaviour
 
     public bool ayuda;
 
-    public static float agregCorrup;
+    public bool agregCorrup;
 
     [Header("Animacion")]
     private Animator animator;
@@ -56,9 +56,11 @@ public class KitsuneBehaviour : MonoBehaviour
 
     public void SeleccionOpcSi()
     {
+        ayuda = true;
+        WorldManager.ka1 = 1;
         WorldManager.posicionPJ = player.transform.position;
         WorldManager.escenaAnter = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(sceneExtra);
+        //SceneManager.LoadScene(sceneExtra);
     }
     
     public void SeleccionOpcNo()
